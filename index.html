@@ -1,252 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Valley View Motel | Affordable Rooms Near Knoxville</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valley Inn Motel</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --main-beige: #f3e5c2;
+      --accent: #7b232a; /* Deeper maroon */
+      --accent-dark: #5a181e;
+      --feature-bg: #f8ecd9;
+      --text: #222;
+      --white: #fff;
     }
-
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f2e8;
-      color: #333;
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--main-beige);
+      color: var(--text);
     }
-
-    a {
-      color: #801f2b;
-      text-decoration: none;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px 0;
-    }
-
-    /* Hotel Name Section at top with maroon background */
-    .hotel-header {
-      background-color: #801f2b;
-      color: #fdfdfd;
+    header {
+      background: var(--accent);
+      color: var(--white);
+      padding: 30px 0 20px 0;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 3em;
-      font-weight: bold;
-      user-select: none;
-      letter-spacing: 2px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
-
-    /* Main section wrapper - left image + right text */
-    .main-section {
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    .hero {
+      max-width: 900px;
+      margin: 30px auto 0 auto;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    .hero img {
+      width: 100%;
+      display: block;
+      max-height: 400px;
+      object-fit: cover;
+      background: var(--main-beige);
+    }
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 32px 28px;
+    }
+    .content h2 {
+      color: var(--accent);
+      margin-top: 0;
+    }
+    .features {
       display: flex;
       flex-wrap: wrap;
-      width: 100%;
-      min-height: 600px;
-      background-color: #f7f2e8;
+      gap: 30px;
+      margin: 30px 0;
     }
-
-    /* Left side image panel */
-    .side-image {
-      flex: 1 1 50%;
-      background-image: url('image.jpg'); /* Replace with your image */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 0 0 0 8px;
-      min-height: 300px;
-    }
-
-    /* Right content column */
-    .content-column {
-      flex: 1 1 50%;
-      padding: 40px 30px 80px 30px;
-      background-color: #f2e5b6;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      position: relative;
-      border-radius: 0 0 8px 0;
-    }
-
-    /* Hero text */
-    .hero-text {
-      margin-bottom: 50px;
-      color: #801f2b;
-    }
-
-    .hero-text h2 {
-      font-size: 2.5em;
-      margin-bottom: 15px;
-    }
-
-    .hero-text p {
-      font-size: 1.2em;
-    }
-
-    /* Features */
-    .features h3 {
-      color: #801f2b;
-      margin-bottom: 15px;
-    }
-
-    .features ul {
-      list-style: none;
-      padding-left: 20px;
-    }
-
-    .features li {
-      padding: 10px 0;
-      font-size: 1.1em;
-    }
-
-    /* Call button near bottom right inside features */
-    .call-btn {
-      background-color: #801f2b;
-      color: #f2e5b6;
-      padding: 12px 20px;
-      font-weight: bold;
-      border-radius: 5px;
-      position: absolute;
-      bottom: 15px;
-      right: 20px;
-      cursor: pointer;
+    .feature {
+      flex: 1 1 220px;
+      background: var(--feature-bg);
+      border-radius: 8px;
+      padding: 18px 16px;
       text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .feature i {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .cta {
+      text-align: center;
+      margin: 40px 0 0 0;
+    }
+    .cta a {
+      background: var(--accent);
+      color: var(--white);
+      padding: 14px 38px;
+      border-radius: 30px;
+      font-size: 1.2rem;
       text-decoration: none;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-      transition: background-color 0.3s ease;
-      white-space: nowrap;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s;
+      display: inline-block;
     }
-
-    .call-btn:hover {
-      background-color: #a32c3e;
+    .cta a:hover {
+      background: var(--accent-dark);
     }
-
-    /* Map */
-    .map {
-      background-color: #fff;
-      padding: 30px 20px;
+    .map-section {
       max-width: 900px;
-      margin: 0 auto 40px auto;
-      border-radius: 8px;
-    }
-
-    /* Contact */
-    .contact {
-      background-color: #fff;
-      padding: 30px 20px;
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      border-radius: 8px;
-    }
-
-    .contact h3,
-    .contact p a {
-      color: #801f2b;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #801f2b;
-      color: #fdfdfd;
+      margin: 30px auto;
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 32px 28px;
       text-align: center;
-      padding: 15px 0;
-      font-size: 0.9em;
     }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .main-section {
-        flex-direction: column;
+    .map-section h2 {
+      color: var(--accent);
+      margin-top: 0;
+    }
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 18px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    footer {
+      background: #222;
+      color: var(--white);
+      text-align: center;
+      padding: 18px 0;
+      font-size: 1rem;
+      margin-top: 40px;
+    }
+    @media (max-width: 1000px) {
+      .content, .hero, .map-section {
+        max-width: 98vw;
+        margin: 18px;
+        padding: 18px 8px;
       }
-
-      .side-image {
-        width: 100%;
+      .map-container {
         height: 250px;
-        border-radius: 8px 8px 0 0;
       }
-
-      .content-column {
-        width: 100%;
-        padding: 20px 15px 100px 15px;
-        border-radius: 0 0 8px 8px;
+    }
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2rem;
       }
-
-      .call-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 999;
+      nav a {
+        font-size: 1rem;
+        margin: 0 10px;
       }
-
-      .hotel-header {
-        font-size: 2em;
-        padding: 20px 10px;
+      .content, .hero, .map-section {
+        margin: 10px;
+        padding: 12px 4px;
+      }
+      .features {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .feature {
+        font-size: 1rem;
+      }
+      .cta a {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+      .map-container {
+        height: 180px;
       }
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <header>
+    <h1>Valley Inn Motel</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#contact">Contact</a>
+      <a href="#map">Map</a>
+    </nav>
+  </header>
 
-  <!-- Hotel name section on top -->
-  <section class="hotel-header">
-    <h3>View Inn Motel</h3>
+  <section class="hero">
+    <img src="image.jpg" alt="Valley Inn Motel exterior">
   </section>
 
-  <!-- Main content: left image, right text + button -->
-  <section class="main-section">
-    <div class="side-image"></div>
-
-    <div class="content-column">
-      <div class="hero-text">
-        <h2>Clean, Quiet & Affordable Stays</h2>
-        <p>Right off I-75 — Minutes from Knoxville</p>
+  <section class="content" id="about">
+    <h2>Welcome to Valley Inn Motel</h2>
+    <p>
+      Experience comfort and convenience at Valley Inn Motel. Located in a peaceful setting, our motel offers clean, affordable rooms and friendly service for travelers, families, and business guests alike. Whether you're passing through or staying for a while, you'll find everything you need for a relaxing stay.
+    </p>
+    <div class="features" id="amenities">
+      <div class="feature">
+        <i class="fas fa-wifi"></i>
+        Free High-Speed Wi-Fi
       </div>
-
-      <section class="features">
-        <h3>Why Stay With Us?</h3>
-        <ul>
-          <li>✅ Weekly & nightly rates</li>
-          <li>✅ Free Wi-Fi & parking</li>
-          <li>✅ Pet-friendly rooms available</li>
-          <li>✅ Close to UT games, shopping & dining</li>
-        </ul>
-      </section>
-
-      <a href="tel:1234567890" class="call-btn">Call to Book</a>
+      <div class="feature">
+        <i class="fas fa-car"></i>
+        Ample Free Parking
+      </div>
+      <div class="feature">
+        <i class="fas fa-bed"></i>
+        Comfortable Rooms
+      </div>
+      <div class="feature">
+        <i class="fas fa-coffee"></i>
+        In-Room Coffee
+      </div>
+      <div class="feature">
+        <i class="fas fa-tv"></i>
+        Flat-Screen TVs
+      </div>
+      <div class="feature">
+        <i class="fas fa-snowflake"></i>
+        Air Conditioning
+      </div>
+      <div class="feature">
+        <i class="fas fa-door-open"></i>
+        24/7 Front Desk
+      </div>
+      <div class="feature">
+        <i class="fas fa-smoking-ban"></i>
+        Non-Smoking Rooms
+      </div>
+    </div>
+    <h2 id="rooms">Our Rooms</h2>
+    <p>
+      Choose from a variety of room types to suit your needs, including single, double, and family rooms. All rooms are equipped with modern amenities to ensure a comfortable stay.
+    </p>
+    <div class="cta">
+      <a href="#contact">Book Your Stay</a>
     </div>
   </section>
 
-  <!-- Map -->
-  <section class="map">
-    <div class="container">
-      <h3>Find Us Here</h3>
+  <section class="content" id="contact">
+    <h2>Contact & Location</h2>
+    <p>
+      <strong>Address:</strong> 1329 E Raccoon Valley Dr, Heiskell, TN 37754<br>
+      <strong>Phone:</strong> (555) 123-4567<br>
+      <strong>Email:</strong> info@valleyinnmotel.com
+    </p>
+    <p>
+      Have questions or want to make a reservation? Call us or use the button above to book your stay!
+    </p>
+  </section>
+
+  <section class="map-section" id="map">
+    <h2>Find Us on the Map</h2>
+    <div class="map-container">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.488306411568!2d-83.9860186847069!3d36.03543678011092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885c263bb6e4b44b%3A0x5d010ebf849a6881!2sRaccoon%20Valley%20Rd%2C%20Knoxville%2C%20TN!5e0!3m2!1sen!2sus!4v1615241191164!5m2!1sen!2sus"
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        src="https://www.google.com/maps?q=Valley+Inn+Motel,+1329+E+Raccoon+Valley+Dr,+Heiskell,+TN+37754&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact">
-    <div class="container">
-      <h3>Call to Reserve Your Room</h3>
-      <p><strong>Phone:</strong> <a href="tel:1234567890">123-456-7890</a></p>
-      <p><strong>Address:</strong> 123 Raccoon Valley Rd, Knoxville TN</p>
-    </div>
-  </section>
-
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Valley View Motel. All rights reserved.</p>
-    </div>
+    &copy; 2025 Valley Inn Motel. All rights reserved.
   </footer>
-
 </body>
 </html>
